@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kursy1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+
+            <Label
+                Text="Waluty"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <VerticalStackLayout Padding="5">
+                <HorizontalStackLayout Padding="5">
+                    <Image Source="usd.png" WidthRequest="50" HeightRequest="50" />
+                    <Label x:Name="usdRateLabel" VerticalOptions="Center" Text="USD: " />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Padding="5">
+                    <Image Source="eur.png" WidthRequest="50" HeightRequest="50" />
+                    <Label x:Name="eurRateLabel" VerticalOptions="Center" Text="EUR: " />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Padding="5">
+                    <Image Source="gbp.png" WidthRequest="50" HeightRequest="50" />
+                    <Label x:Name="gbpRateLabel" VerticalOptions="Center" Text="GBP: " />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <DatePicker x:Name="dpData" />
+            <Button
+                Text="Pobierz kurs"
+                Clicked="OnGetRatesClicked"
+                HorizontalOptions="Fill" />
+
+            <Label x:Name="resultLabel" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
